@@ -12,12 +12,12 @@ do
     hostname=$(echo "$line" | awk '{print $4}')
     user=$(echo "$line" | awk '{print $9}')
 
-    mensaje="""
+    message="""
 New login for "${user}"
 System accessed from "${ip}"
 Access hour -> "${date}"
 Hostname -> "${hostname}"
     """
 
-    curl -s -X POST $URL -d chat_id=$ID -d text="$mensaje" > /dev/null
+    curl -s -X POST $URL -d chat_id=$ID -d text="$message" > /dev/null
 done;
