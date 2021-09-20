@@ -4,7 +4,7 @@ TOKEN="YOUR TOKEN"
 ID="YOUR CHAT_ID"
 URL="https://api.telegram.org/bot${TOKEN}/sendMessage"
 
-sudo tail --follow=name --retry "/var/log/auth.log" | fgrep -ai "accepted password" --line-buffered |
+sudo tail --follow=name --retry "/var/log/auth.log" | fgrep --line-buffered -ai -e "accepted password" -e "accepted publickey" |
 while read -r line; 
 do 
     ip=$(echo "$line" | awk '{print $11}')
