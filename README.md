@@ -20,11 +20,11 @@
 ### Running
 The script can be launched with the following commands:  
 ```plaintext
-user@hostname:~$ bash logbot.sh &
+user@hostname:~$ sudo bash logbot.sh &
 ```
 or  
 ```plaintext
-user@hostname:~$ nohup bash logbot.sh &
+user@hostname:~$ sudo nohup bash logbot.sh &
 ```
 
 ### Running as service
