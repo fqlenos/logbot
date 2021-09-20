@@ -4,7 +4,7 @@ Description=Automatic alerts for new logins via Telegram Bot
 [Service]
 User=root
 WorkingDirectory=/path/to/folder
-ExecStart= nohup bash /path/to/script/logbot.sh &
+ExecStart=nohup bash /path/to/script/logbot.sh &
 Restart=always
 
 [Install]
